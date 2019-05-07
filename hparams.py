@@ -19,7 +19,7 @@ text_cleaners = ['english_cleaners']
 batch_size = 24
 epochs = 10000
 dataset_path = "dataset"
-learning_rate = 0.0006
+learning_rate = 0.0007
 weight_decay = 1e-6
 checkpoint_path = "./model_new"
 grad_clip_thresh = 0.6
@@ -27,10 +27,3 @@ decay_step = [5000, 10000, 50000]
 save_step = 100
 log_step = 5
 clear_Time = 20
-
-# Model-Tacotron
-hidden_size = 128
-embedding_size = 256
-teacher_forcing_ratio = 1.0
-max_iters = 200
-outputs_per_step = 5
