@@ -105,8 +105,17 @@ def main(args):
             # print(total_loss.item())
 
             t_l = total_loss.item()
-            with open("loss.txt", "a") as f_loss:
-                f_loss.write(str(t_l)+"\n")
+            m_l = mel_loss.item()
+            g_l = gate_loss.item()
+
+            with open("total_loss.txt", "a") as f_total_loss:
+                f_total_loss.write(str(t_l)+"\n")
+
+            with open("mel_loss.txt", "a") as f_mel_loss:
+                f_mel_loss.write(str(m_l)+"\n")
+
+            with open("gate_loss.txt", "a") as f_gate_loss:
+                f_gate_loss.write(str(g_l)+"\n")
 
             # Backward
             total_loss.backward()
