@@ -16,7 +16,7 @@ use_lws = False
 text_cleaners = ['english_cleaners']
 
 # Train
-batch_size = 24
+batch_size = 28
 epochs = 10000
 dataset_path = "dataset"
 learning_rate = 0.0007
@@ -27,3 +27,10 @@ decay_step = [5000, 10000, 50000]
 save_step = 100
 log_step = 5
 clear_Time = 20
+
+# Model-Tacotron
+hidden_size = 128
+embedding_size = 256
+teacher_forcing_ratio = 1.0
+max_iters = 200
+outputs_per_step = 5
